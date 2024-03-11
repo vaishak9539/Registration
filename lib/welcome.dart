@@ -18,17 +18,19 @@ class _WelcomeState extends State<Welcome> {
       body: SafeArea(
         child: Column(
           children: [
+
+            //*Image 
             Container(
-              height: 370,
+              height: 390,
               width: double.infinity,
-                child: Image.asset(
-                      "assets/images/welcome.jpg",
-                      fit: BoxFit.cover,
+              child: Image.asset(
+                "assets/images/welcome.jpg",
+                fit: BoxFit.cover,
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(
-                right: 150,
+                right: 150,top: 30
               ),
               child: Container(
                 width: 300,
@@ -54,14 +56,17 @@ class _WelcomeState extends State<Welcome> {
                 ),
               ),
             ),
+            
+            //*Button
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.only(top: 40),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (ctx) {
                         return SiginIn();
                       }));
                     },
@@ -78,7 +83,7 @@ class _WelcomeState extends State<Welcome> {
                       )),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.green[400],
+                        color: Colors.green[900],
                       ),
                     ),
                   ),
@@ -108,7 +113,7 @@ class _WelcomeState extends State<Welcome> {
                       )),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.green[400],
+                        color: Colors.green[900],
                       ),
                     ),
                   ),
@@ -116,7 +121,7 @@ class _WelcomeState extends State<Welcome> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 40),
+              padding: const EdgeInsets.only(top: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

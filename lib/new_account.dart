@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class NewAccount extends StatefulWidget {
@@ -8,26 +10,29 @@ class NewAccount extends StatefulWidget {
 }
 
 class _NewAccountState extends State<NewAccount> {
-  bool checking=true;
+  bool checking = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 400,
+
+            //*Image
+            SizedBox(
+              height: 350,
               width: double.infinity,
               child: Image.asset(
-                    "assets/images/signup.jpg",
-                    fit: BoxFit.cover,
+                "assets/images/signup.jpg",
+                fit: BoxFit.cover,
+              ),
             ),
-            ),
-            Text("Create your account",
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w500,
-            ),
+            Text(
+              "Create your account",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
@@ -37,15 +42,17 @@ class _NewAccountState extends State<NewAccount> {
                 child: TextFormField(
                   decoration: InputDecoration(
                       hintText: "Your name",
-                      prefixIcon:const Icon(Icons.account_circle),
+                      prefixIcon: const Icon(Icons.account_circle),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.blue, width: 2))),
+                          borderSide:
+                              BorderSide(color: Colors.blue, width: 2))),
                   keyboardType: TextInputType.name,
                 ),
               ),
             ),
-            
+
+            //*Textformfield
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: SizedBox(
@@ -54,10 +61,11 @@ class _NewAccountState extends State<NewAccount> {
                 child: TextFormField(
                   decoration: InputDecoration(
                       hintText: "Your Email",
-                      prefixIcon:const Icon(Icons.email),
+                      prefixIcon: const Icon(Icons.email),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.blue, width: 2))),
+                          borderSide:
+                              BorderSide(color: Colors.blue, width: 2))),
                   keyboardType: TextInputType.emailAddress,
                 ),
               ),
@@ -69,30 +77,32 @@ class _NewAccountState extends State<NewAccount> {
                 width: 340,
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: "Password",
-                    suffixIcon: IconButton(onPressed: (){
-                      setState(() {
-                        checking=!checking;
-                      });
-                    },
-                     icon: Icon(checking? Icons.visibility_off :Icons.visibility)),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30)
-                  )
-                  ),
+                      hintText: "Password",
+                      suffixIcon: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              checking = !checking;
+                            });
+                          },
+                          icon: Icon(checking
+                              ? Icons.visibility_off
+                              : Icons.visibility)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30))),
                   obscureText: checking,
                   obscuringCharacter: "*",
                 ),
               ),
             ),
-             Padding(
+            //*Button
+            Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     height: 60,
-                    width: 300,
+                    width: 250,
                     child: Center(
                         child: Text(
                       "Sigin up",
@@ -103,7 +113,7 @@ class _NewAccountState extends State<NewAccount> {
                     )),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.green[400],
+                      color: Colors.green[900],
                     ),
                   ),
                 ],
@@ -114,10 +124,9 @@ class _NewAccountState extends State<NewAccount> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Or continue with",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500
-                  ),
+                  Text(
+                    "Or continue with",
+                    style: TextStyle(fontWeight: FontWeight.w500),
                   )
                 ],
               ),
@@ -133,15 +142,18 @@ class _NewAccountState extends State<NewAccount> {
                       height: 60,
                       width: 60,
                       child: Image.asset("assets/images/FACEBOOK.png"),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),
                   Container(
                     height: 60,
                     width: 60,
-                    child: Image.asset("assets/images/Google-logo-2015-G-icon.png"),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
+                    child: Image.asset(
+                        "assets/images/Google-logo-2015-G-icon.png"),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                   Padding(
@@ -150,7 +162,8 @@ class _NewAccountState extends State<NewAccount> {
                       height: 45,
                       width: 45,
                       child: Image.asset("assets/images/R.png"),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   )
@@ -160,7 +173,6 @@ class _NewAccountState extends State<NewAccount> {
           ],
         ),
       ),
-
     );
   }
 }

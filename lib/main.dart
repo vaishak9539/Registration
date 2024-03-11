@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_registration/sigin_in.dart';
+import 'package:login_registration/home.dart';
 import 'package:login_registration/splash.dart';
-import 'package:login_registration/welcome.dart';
+
 
 void main() {
   runApp(const MyApp());
