@@ -224,7 +224,7 @@ class _KidsState extends State<Kids> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5),
-                          child: Text("assets/images/kids 8.webp"),
+                          child: Text("Hellcat "),
                         ),
                         Text(
                           "₹299",

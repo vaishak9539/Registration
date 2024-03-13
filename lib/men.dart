@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:login_registration/prodect%20de.dart';
 
 class Men extends StatefulWidget {
   const Men({super.key});
@@ -51,12 +52,19 @@ class _MenState extends State<Men> {
                     children: [
                       Column(
                         children: [
-                          SizedBox(
-                            height: 230,
-                            width: 190,
-                            child: Image.asset(
-                              "assets/images/men 1.webp",
-                              fit: BoxFit.cover,
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (ctx){
+                                return ProdectDe();
+                              }));
+                            },
+                            child: SizedBox(
+                              height: 230,
+                              width: 190,
+                              child: Image.asset(
+                                "assets/images/men 1.webp",
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Padding(
@@ -71,7 +79,7 @@ class _MenState extends State<Men> {
                       ),
                       Column(
                         children: [
-                          SizedBox(
+                          Container(
                             height: 230,
                             width: 190,
                             child: Image.asset(

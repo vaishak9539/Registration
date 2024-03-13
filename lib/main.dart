@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_registration/home.dart';
-import 'package:login_registration/splash.dart';
+import 'package:login_registration/orderdetails.dart';
+import 'package:login_registration/my_orders.dart';
+
 
 
 void main() {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Splash1()
+      home: Home()
     );
   }
 }

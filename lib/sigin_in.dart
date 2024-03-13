@@ -76,6 +76,7 @@ class _SiginInState extends State<SiginIn> {
                       if (value1 == null || value1.isEmpty) {
                         return "Please enter your email";
                       }
+                      return null;
                     },
                     keyboardType: TextInputType.emailAddress,
                   ),

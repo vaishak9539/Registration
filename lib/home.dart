@@ -9,6 +9,7 @@ import 'package:login_registration/my_account.dart';
 import 'package:login_registration/my_cart.dart';
 import 'package:login_registration/settings.dart';
 import 'package:login_registration/sigin_in.dart';
+import 'package:login_registration/wishlist.dart';
 import 'package:login_registration/women.dart';
 
 class Home extends StatefulWidget {
@@ -55,10 +56,7 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.shopping_cart,
             color: Colors.black,
             ))
-            //  Icon(
-            //   Icons.shopping_cart,
-            //   color: Colors.black,
-            // ),
+           
           ),
         ],
       ),
@@ -485,13 +483,13 @@ class _HomeState extends State<Home> {
           ),
 
           ListTile(
-            leading: const Icon(Icons.update),
+            leading: const Icon(Icons.favorite),
             title: const Text(
-              'update',
+              'Wishlist',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (ctx)=>Wishlist()));
             },
           ),
 

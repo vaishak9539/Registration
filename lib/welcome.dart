@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:login_registration/new_account.dart';
 import 'package:login_registration/sigin_in.dart';
 
@@ -129,7 +131,7 @@ class _WelcomeState extends State<Welcome> {
                     height: 50,
                     width: 200,
                     // color: Colors.yellow,
-                    child: Center(child: Text("Terms & Conditions")),
+                    child: Center(child: Text("Terms & Conditions",)),
                   ),
                 ],
               ),
