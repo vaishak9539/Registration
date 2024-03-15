@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_registration/home.dart';
-import 'package:login_registration/orderdetails.dart';
-import 'package:login_registration/my_orders.dart';
-
 
 
 void main() {

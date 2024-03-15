@@ -25,7 +25,6 @@ class _MycartState extends State<Mycart> {
             Container(
               height: 150,
               width: double.infinity,
-              color: Colors.grey,
               child: Row(
                 children: [
                   Column(

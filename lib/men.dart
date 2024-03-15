@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:login_registration/prodect%20de.dart';
 
 class Men extends StatefulWidget {
@@ -11,6 +12,8 @@ class Men extends StatefulWidget {
 }
 
 class _MenState extends State<Men> {
+  var favoriteitems = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +56,9 @@ class _MenState extends State<Men> {
                       Column(
                         children: [
                           InkWell(
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (ctx){
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (ctx) {
                                 return ProdectDe();
                               }));
                             },
@@ -79,14 +83,33 @@ class _MenState extends State<Men> {
                       ),
                       Column(
                         children: [
-                          Container(
-                            height: 230,
-                            width: 190,
-                            child: Image.asset(
-                              "assets/images/men 4.webp",
-                              fit: BoxFit.cover,
+                          Stack(children: [
+                            Container(
+                              height: 230,
+                              width: 190,
+                              child: Image.asset(
+                                "assets/images/men 4.webp",
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 140),
+                              child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      favoriteitems = !favoriteitems;
+                                    });
+                                  },
+                                  icon: favoriteitems
+                                      ? Icon(
+                                          Icons.favorite,
+                                        )
+                                      : Icon(
+                                          Icons.favorite,
+                                          color: Colors.red[500],
+                                        )),
+                            )
+                          ]),
                           Padding(
                             padding: const EdgeInsets.only(top: 5),
                             child: Text("RODEIZ "),
@@ -117,7 +140,7 @@ class _MenState extends State<Men> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 5),
-                            child: Text("LAMBOO "),
+                            child: Text("LAMBOO"),
                           ),
                           Text(
                             "₹390",

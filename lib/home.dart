@@ -83,12 +83,35 @@ class _HomeState extends State<Home> {
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 10, top: 10, right: 10),
-                    child: SizedBox(
-                      height: 210,
-                      width: 390,
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(17),
-                          child: Image.asset("assets/images/dress 2.jpg")),
+                    child: Stack(
+                      children:[ SizedBox(
+                        height: 210,
+                        width: 390,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(17),
+                            child: Image.asset("assets/images/baner 1.jpg",
+                            fit: BoxFit.cover,
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30,top: 50),
+                        child: Column(
+                          children: [
+                            Text("BRIDEL",style: TextStyle(
+                              fontSize: 25,
+                              // fontWeight: FontWeight.bold,
+                              color: Colors.grey[800]
+                            ),),
+                            Text("COLLECTIVE",style: TextStyle(
+                          fontSize: 25,
+                          // fontWeight: FontWeight.bold,
+                          color: Colors.grey[800]
+                        ),)
+                          ],
+                        ),
+                      ),
+                       
+                      ]
                     ),
                   ),
                   Padding(
@@ -451,6 +474,7 @@ class _HomeState extends State<Home> {
           child: ListView(
         children: [
           UserAccountsDrawerHeader(
+            decoration: BoxDecoration(color: Colors.grey),
               accountName: Text("Vaishak"),
               accountEmail: Text("Vaishakp17@gmail.com"),
               currentAccountPicture: CircleAvatar(
